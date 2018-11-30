@@ -3,7 +3,7 @@ Simple BASH script for converting a .mp4 video to an image sequence and extracti
 
 # Usage
 1. Place the file in your $PATH and make it executable.
-2. CD to a directory containing one or more MP4 files and type m21
+2. CD to a directory containing one or more video files and type the command 'm2i'
 3. 
 4. Profit
 
