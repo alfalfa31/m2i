@@ -1,5 +1,5 @@
 # m2i
-Simple BASH script for converting a .mp4 video to an image sequence and extracting its audio (if any) to a .wav file within the same directory.  It works on any Linux system with FFMPEG and FFPROBE installed (which is pretty much all default installs). 
+Simple BASH script for converting video files to image sequences and extracting audio (if any) to a .wav file within the same directory.  It works on any Linux system with FFMPEG and FFPROBE installed (which is pretty much all default installs). 
 
 # Usage
 1. Place the file in your $PATH and make it executable.
