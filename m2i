@@ -1,7 +1,5 @@
 #!/bin/bash
-IFS='
-'
-FILES=*.mp4
+FILES=$(find -type f -printf '%P\000' | egrep -iz '\.(avi|mpg|mov|flv|wmv|asf|mpeg|m4v|divx|mp4|mkv|webm)$' | sort -z | xargs -0 ls -1)
 for NAME in $FILES
 do
   DIR=$(echo $NAME | cut -f 1 -d '.' | tr -cd [:alnum:])
@@ -9,6 +7,6 @@ do
   mkdir $DIR
   sleep 5
   echo "Processing $NAME..."
-  ffmpeg -i $NAME ./$DIR/%4d.png
+  ffmpeg -i $NAME ./$DIR/%6d.png
   ffmpeg -i $NAME -vn -acodec pcm_s16le -ar 44100 -ac 2 ./$DIR/audio-track.wav
 done
