@@ -1,4 +1,5 @@
 #!/bin/bash
+for f in *; do mv "$f" `echo $f | tr ' ' '_'`; done
 FILES=$(find -type f -printf '%P\000' | egrep -iz '\.(avi|mpg|mov|flv|wmv|asf|mpeg|m4v|divx|mp4|mkv|webm)$' | sort -z | xargs -0 ls -1)
 for NAME in $FILES
 do
