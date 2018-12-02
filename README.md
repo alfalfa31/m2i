@@ -8,8 +8,8 @@ Simple BASH script for converting video files to image sequences and extracting 
 4. Profit
 
 # What it does
-It converts all video files (of the following types: avi|mpg|mov|flv|wmv|asf|mpeg|m4v|divx|mp4|mkv|webm) in the current working directory to image sequences (up to 999,999 frames in length) in a subdirectory. It also demuxes audio for use in video editors and compositors which prefer image sequences to compressed video such as Blackmagic Design's Fusion, KDEnLive, DaVinci Resolve (which is still codec crippled on Linux).
+First, it renames all the files so that they're sane (it replaces spaces with underscores).  It then converts all video files (of the following types: avi|mpg|mov|flv|wmv|asf|mpeg|m4v|divx|mp4|mkv|webm) in the current working directory to image sequences (up to 999,999 frames in length) in a subdirectory. It also demuxes audio for use in video editors and compositors which prefer image sequences to compressed video such as Blackmagic Design's Fusion, KDEnLive, DaVinci Resolve (which is still codec crippled on Linux).
 
 It depends heavily on ffmpeg and requires ffprobe.
 
-It would be pretty easy to extend it to whatever use case you can think of, for instance making it smarter on mime types.  Pay special attention to the source media's frame rate so that you can match the audio to the video in your editor.
+It would be pretty easy to extend it to whatever use case you can think of, for instance making it smarter on mime types.  Pay special attention to the source media's frame rate so that you can match the audio to the video in your editor.  In case you need to consult the sorce video with FFPROBE or something, the script leaves it in the working directory. 
